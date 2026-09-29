@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mentoria em Grupo | Aprenda a Advogar</title>
+<meta name="description" content="Mentoria em grupo na sua área do Direito com advogados experientes. Online, ao vivo e com gravação. R$ 149/mês, cancele quando quiser.">
+<meta property="og:title" content="Mentoria em Grupo na sua área do Direito | Aprenda a Advogar">
+<meta property="og:description" content="Online, ao vivo e gravada. R$ 149/mês, cancele quando quiser.">
+<meta property="og:image" content="img/hero.webp">
+<link rel="icon" href="https://aprendaadvogar.com.br/img/favicon-69f00aa6.png">
+<!-- Google Tag Manager (mesmo container do site principal) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MTV7NHVV');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Base: design system white-medical (Inter + Plus Jakarta, grid lines, beams, pills) com paleta da hero */
+:root{
+  --navy:#0b1f44; --ink:#0f172a; --muted:#64748b; --line:#e2e8f0; --soft:#f1f8fa;
+  --teal:#0fb3a6; --teal-d:#0a8f85; --green:#4cc84f; --orange:#e8732c; --red:#ef2b2d; --amber:#f7a70a;
+  --grad:linear-gradient(90deg,#0fa4ab 0%,#4cc84f 100%);
+  --grid:rgba(11,31,68,.05);
+  --r:20px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:"Plus Jakarta Sans",Inter,sans-serif;letter-spacing:-.02em;line-height:1.1;color:var(--navy)}
+img{max-width:100%;display:block}
+a{color:inherit}
+svg.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto;position:relative;z-index:1}
+section{position:relative;padding:96px 0}
+.label{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-d)}
+.label::before{content:"";width:6px;height:6px;background:var(--orange)}
+.h2{font-size:clamp(30px,4.2vw,48px);font-weight:800;margin:14px 0 16px}
+.h2 em{font-style:normal;color:var(--orange)}
+.lead{font-size:18px;color:var(--muted);max-width:640px}
+
+/* grid lines + beams (DS) */
+.gridbg{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.gridbg span{position:absolute;top:0;bottom:0;width:1px;background:var(--grid)}
+.gridbg span:nth-child(1){left:6%}.gridbg span:nth-child(2){left:50%}.gridbg span:nth-child(3){left:94%}
+.gridbg span::after{content:"";position:absolute;left:0;width:1px;height:180px;background:linear-gradient(180deg,transparent,var(--teal),transparent);animation:beam 7s infinite;opacity:0}
+.gridbg span:nth-child(2)::after{animation-delay:2.5s}.gridbg span:nth-child(3)::after{animation-delay:4.5s}
+@keyframes beam{0%{top:-180px;opacity:0}10%,90%{opacity:1}100%{top:100%;opacity:0}}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;gap:12px;border:0;cursor:pointer;text-decoration:none;font:600 16px/1 Inter,sans-serif;color:#fff;background:var(--grad);padding:8px 8px 8px 26px;border-radius:999px;box-shadow:0 10px 30px -10px rgba(15,164,171,.6);transition:transform .2s,box-shadow .2s}
+.btn .dot{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.22);display:grid;place-items:center;transition:transform .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 36px -12px rgba(15,164,171,.7)}
+.btn:hover .dot{transform:translateX(3px)}
+.btn:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+
+/* header (aparece depois da hero) */
+.top{position:fixed;inset:0 0 auto;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);transform:translateY(-100%);transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.top.on{transform:none}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.top img{height:40px;width:auto}
+.top .btn{font-size:14px;padding:5px 5px 5px 18px}.top .btn .dot{width:32px;height:32px}
+@media(max-width:560px){.top .btn .t2{display:none}}
+
+/* 1 · hero */
+.hero{padding:0;background:#eef8fb}
+.hero>a{display:block}
+.hero img{width:100%;height:auto}
+.hero-strip{display:none}
+@media(max-width:760px){
+  .hero-strip{display:block;padding:24px 0 32px;background:linear-gradient(#fff,#eef8fb)}
+  .chips{display:grid;gap:10px;margin-bottom:22px}
+  .chip{display:flex;align-items:center;gap:12px;font-weight:500}
+  .chip b{width:40px;height:40px;border-radius:50%;display:grid;place-items:center}
+  .hero-strip .btn{width:100%;justify-content:space-between}
+}
+
+/* 2 · metodologia + diferenciais */
+.method{display:grid;grid-template-columns:1fr 1.05fr;gap:64px;align-items:start}
+.steps{list-style:none;padding:0;margin-top:32px;display:grid;gap:0;counter-reset:s}
+.steps li{position:relative;padding:0 0 26px 64px;counter-increment:s}
+.steps li::before{content:"0" counter(s);position:absolute;left:0;top:-4px;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;font:800 15px "Plus Jakarta Sans";color:#fff;background:var(--navy)}
+.steps li:not(:last-child)::after{content:"";position:absolute;left:22px;top:46px;bottom:6px;width:1px;background:var(--line)}
+.steps h3{font-size:18px;margin-bottom:4px}
+.steps p{color:var(--muted)}
+.difs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.dif{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;transition:border-color .25s,transform .25s,box-shadow .25s}
+.dif:hover{border-color:rgba(15,179,166,.45);transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(11,31,68,.35)}
+.dif b{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;margin-bottom:14px}
+.dif h3{font-size:16px;margin-bottom:6px}
+.dif p{font-size:14.5px;color:var(--muted)}
+.dif.wide{grid-column:1/-1;display:flex;gap:18px;align-items:center;background:var(--navy);border-color:var(--navy)}
+.dif.wide b{margin:0}
+.dif.wide h3{color:#fff}.dif.wide p{color:#b9c4d8}
+.c-teal{background:#e3f7f5;color:var(--teal-d)}.c-green{background:#e7f8e8;color:#2f9e33}.c-orange{background:#fdeee4;color:var(--orange)}.c-red{background:#fde7e7;color:var(--red)}.c-amber{background:#fff4dc;color:#c98500}.c-navy{background:#e8ecf5;color:var(--navy)}.c-glass{background:rgba(255,255,255,.12);color:#fff}
+
+/* 3 · mentores */
+.mentors{background:var(--soft)}
+.m-head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:44px}
+.m-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.m{background:#fff;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column}
+.m figure{position:relative;aspect-ratio:4/5;overflow:hidden;margin:0}
+.m figure img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.m:hover figure img{transform:scale(1.05)}
+.m .area{position:absolute;left:12px;bottom:12px;right:12px;font-size:12px;font-weight:600;color:var(--navy);background:rgba(255,255,255,.92);backdrop-filter:blur(6px);padding:6px 12px;border-radius:999px;width:fit-content}
+.m div{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.m h3{font-size:17px}
+.m p{font-size:13.5px;color:var(--muted)}
+.m a{margin-top:auto;padding-top:6px;display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;color:var(--teal-d);text-decoration:none}
+.m a svg{width:16px;height:16px}
+.m a:hover{color:var(--orange)}
+
+/* 4 · investimento + inscrição */
+.enroll{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;margin-top:48px}
+.price{border-radius:28px;padding:40px;background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.price::before{content:"";position:absolute;right:-80px;top:-80px;width:260px;height:260px;border-radius:60px;transform:rotate(45deg);background:var(--grad);opacity:.9}
+.price>*{position:relative}
+.price .tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;background:rgba(255,255,255,.12);padding:6px 12px;border-radius:999px}
+.amount{font:800 clamp(64px,8vw,92px)/1 "Plus Jakarta Sans";letter-spacing:-.04em;margin:22px 0 4px;color:#fff}
+.amount small{font-size:.3em;letter-spacing:0;font-weight:700;vertical-align:.25em;margin-right:6px}
+.amount span{font-size:.32em;letter-spacing:0;color:#b9c4d8;font-weight:600}
+.price .per{color:#b9c4d8;margin-bottom:26px}
+.checks{list-style:none;padding:0;display:grid;gap:12px}
+.checks li{display:flex;gap:12px;align-items:center}
+.checks b{width:28px;height:28px;border-radius:50%;background:var(--grad);display:grid;place-items:center}
+.checks svg{width:15px;height:15px;stroke-width:3}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+.fact{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:14px 16px}
+.fact strong{display:block;font-family:"Plus Jakarta Sans";font-size:15px}
+.fact span{font-size:13px;color:#b9c4d8}
+.solo{margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:14.5px;color:#d7deea}
+.solo a{color:#8fe5a0;font-weight:600}
+
+.form{border-radius:28px;padding:40px;background:#fff;border:1px solid var(--line);box-shadow:0 30px 60px -40px rgba(11,31,68,.35)}
+.form h3{font-size:26px;margin-bottom:6px}
+.form>p{color:var(--muted);margin-bottom:24px}
+.field{display:grid;gap:6px;margin-bottom:16px}
+.field label{font-size:14px;font-weight:600;color:var(--navy)}
+.field input,.field select{font:inherit;font-size:16px;width:100%;padding:14px 16px;border:1px solid #cbd5e1;border-radius:14px;background:#fff;color:var(--ink);transition:border-color .2s,box-shadow .2s}
+.field input:focus,.field select:focus{outline:0;border-color:var(--teal);box-shadow:0 0 0 4px rgba(15,179,166,.15)}
+.form .btn{width:100%;justify-content:space-between;margin-top:8px;font-size:17px}
+.form .btn[disabled]{opacity:.6;cursor:wait}
+.note{font-size:12.5px;color:var(--muted);margin-top:14px;text-align:center}
+.msg{display:none;margin-top:16px;padding:14px 16px;border-radius:14px;font-size:15px}
+.msg.ok{display:block;background:#e7f8e8;color:#1f6e22}
+.msg.err{display:block;background:#fde7e7;color:#9b1c1c}
+
+footer{background:var(--navy);color:#b9c4d8;padding:40px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+footer img{height:44px;width:auto}
+footer nav{display:flex;gap:20px;flex-wrap:wrap}
+footer a{text-decoration:none}footer a:hover{color:#fff}
+
+/* scroll reveal (DS) */
+.rv{opacity:0;transform:translateY(20px);transition:opacity 1s cubic-bezier(.16,1,.3,1),transform 1s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.gridbg span::after{display:none}html{scroll-behavior:auto}}
+
+@media(max-width:1000px){
+  .method,.enroll{grid-template-columns:1fr;gap:40px}
+  .m-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:560px){
+  section{padding:64px 0}
+  .difs{grid-template-columns:1fr}
+  .m-grid{gap:12px}
+  .m div{padding:12px 12px 14px}.m h3{font-size:15px}.m p{display:none}.m .area{font-size:11px;left:8px;right:8px;bottom:8px;padding:5px 9px}.m a{font-size:12px;gap:6px;white-space:nowrap}
+  .price,.form{padding:28px 22px}
+  .facts{grid-template-columns:1fr}
+  .dif.wide{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTV7NHVV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-brief" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></symbol>
+  <symbol id="i-live" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49"/><path d="M7.76 16.24a6 6 0 0 1 0-8.49"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 19.07a10 10 0 0 1 0-14.14"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24"><path d="m16 13 5.22 3.48a.5.5 0 0 0 .78-.42V7.87a.5.5 0 0 0-.75-.43L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/><path d="m14 14-4 4"/><path d="m10 14 4 4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4z"/></symbol>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a href="#"><img src="img/logo-escuro.webp" alt="Aprenda a Advogar" width="440" height="194"></a>
+    <a class="btn" href="#inscricao"><span>Quero minha vaga<span class="t2"> · R$ 149/mês</span></span><span class="dot"><svg class="i"><use href="#i-arrow"/></svg></span></a>
+  </div>
+</header>
+
+<main>
+<!-- DOBRA 1 · HERO -->
+<section class="hero" id="hero">
+  <a href="#inscricao" aria-label="Mentoria em grupo na sua área do Direito por R$ 149 por mês. Saiba mais">
+    <picture>
+      <source media="(max-width:760px)" srcset="img/hero-mobile.webp">
+      <img src="img/hero.webp" width="1942" height="809" alt="Mentoria em grupo na sua área do Direito. R$ 149/mês. Online e ao vivo, gravações disponíveis, cancele quando quiser." fetchpriority="high">
+    </picture>
+  </a>
+  <div class="hero-strip">
+    <div class="wrap">
+      <div class="chips">
+        <div class="chip"><b class="c-teal"><svg class="i"><use href="#i-live"/></svg></b>Online e ao vivo</div>
+        <div class="chip"><b class="c-green"><svg class="i"><use href="#i-video"/></svg></b>Gravações disponíveis</div>
+        <div class="chip"><b class="c-red"><svg class="i"><use href="#i-cal"/></svg></b>Cancele quando quiser</div>
+      </div>
+      <a class="btn" href="#inscricao"><span>Garantir minha vaga</span><span class="dot"><svg class="i"><use href="#i-arrow"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- DOBRA 2 · METODOLOGIA + DIFERENCIAIS -->
+<section id="metodo">
+  <div class="gridbg" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="wrap method">
+    <div class="rv">
+      <span class="label">Metodologia</span>
+      <h2 class="h2">Da teoria à prática, <em>com quem já advoga.</em></h2>
+      <p class="lead">Mentoria em grupo, ao vivo e on-line, na área do Direito em que você quer atuar, conduzida por mentores experientes.</p>
+      <ol class="steps">
+        <li><h3>Escolha sua área de atuação</h3><p>Você entra em uma turma direcionada à área do Direito que deseja seguir.</p></li>
+        <li><h3>Encontros ao vivo com o mentor</h3><p>Em cada encontro, um tema específico ou caso prático da área, com orientações, discussões e espaço para dúvidas e troca de experiências.</p></li>
+        <li><h3>Assista quando puder</h3><p>Não conseguiu participar ao vivo? A gravação do encontro fica disponível na plataforma.</p></li>
+      </ol>
+    </div>
+    <div class="difs">
+      <article class="dif rv"><b class="c-teal"><svg class="i"><use href="#i-brief"/></svg></b><h3>Advogados experientes</h3><p>Aprenda com quem já vivencia a prática da advocacia.</p></article>
+      <article class="dif rv"><b class="c-orange"><svg class="i"><use href="#i-target"/></svg></b><h3>Foco na prática</h3><p>Orientações voltadas aos desafios do dia a dia profissional.</p></article>
+      <article class="dif rv"><b class="c-navy"><svg class="i"><use href="#i-scale"/></svg></b><h3>Sua área de interesse</h3><p>Turma direcionada à área do Direito em que você quer atuar.</p></article>
+      <article class="dif rv"><b class="c-green"><svg class="i"><use href="#i-live"/></svg></b><h3>Ao vivo e on-line</h3><p>Contato direto com o mentor e interação durante os encontros.</p></article>
+      <article class="dif rv"><b class="c-red"><svg class="i"><use href="#i-video"/></svg></b><h3>Acesso às gravações</h3><p>Perdeu o encontro? Assista depois pela plataforma.</p></article>
+      <article class="dif rv"><b class="c-amber"><svg class="i"><use href="#i-chat"/></svg></b><h3>Troca de experiências</h3><p>Aprenda também com as dúvidas e vivências dos colegas.</p></article>
+      <article class="dif wide rv"><b class="c-glass"><svg class="i"><use href="#i-monitor"/></svg></b><div><h3>Plataforma Aprenda a Advogar</h3><p>Conteúdos e gravações centralizados em um único ambiente.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- DOBRA 3 · MENTORES -->
+<section class="mentors" id="mentores">
+  <div class="gridbg" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="wrap">
+    <div class="m-head rv">
+      <div>
+        <span class="label">Mentores</span>
+        <h2 class="h2">Quem vai te <em>orientar</em></h2>
+        <p class="lead">Advogados atuantes, cada um na sua área, guiando a turma com casos reais.</p>
+      </div>
+      <a class="btn" href="#inscricao"><span>Escolher minha área</span><span class="dot"><svg class="i"><use href="#i-arrow"/></svg></span></a>
+    </div>
+    <div class="m-grid">
+      <article class="m rv"><figure><img src="img/fabiola.webp" alt="Fabíola de A. Rocha" loading="lazy" width="640" height="800"><figcaption class="area">Energia e Ambiental</figcaption></figure><div><h3>Fabíola de A. Rocha</h3><a href="https://www.youtube.com/shorts/zC_EJSmBUMU" target="_blank" rel="noopener"><svg class="i"><use href="#i-play"/></svg>Ver apresentação</a></div></article>
+      <article class="m rv"><figure><img src="img/augusto.webp" alt="Augusto Valadares Silva" loading="lazy" width="640" height="800"><figcaption class="area">Médico e Consumidor</figcaption></figure><div><h3>Augusto Valadares</h3><p>Advogado desde 2013, referência em contratos de planos de saúde.</p><a href="https://www.youtube.com/shorts/Lra1xQim6J4" target="_blank" rel="noopener"><svg class="i"><use href="#i-play"/></svg>Ver apresentação</a></div></article>
+      <article class="m rv"><figure><img src="img/aimbere.webp" alt="Aimbere Francisco" loading="lazy" width="640" height="800"><figcaption class="area">Família e Empresarial</figcaption></figure><div><h3>Aimbere Francisco</h3><a href="https://www.youtube.com/shorts/GWufPlDNbCU" target="_blank" rel="noopener"><svg class="i"><use href="#i-play"/></svg>Ver apresentação</a></div></article>
+      <article class="m rv"><figure><img src="img/helena.webp" alt="Helena Carvalho" loading="lazy" width="640" height="800"><figcaption class="area">Direito Médico</figcaption></figure><div><h3>Helena Carvalho</h3><a href="https://www.youtube.com/shorts/vHe0OVZzGl0" target="_blank" rel="noopener"><svg class="i"><use href="#i-play"/></svg>Ver apresentação</a></div></article>
+      <article class="m rv"><figure><img src="img/bruno-melo.webp" alt="Bruno Melo" loading="lazy" width="640" height="800"><figcaption class="area">Direito Civil</figcaption></figure><div><h3>Bruno Melo</h3><p>Pós-graduado em Ciências Criminais, com atuação nos setores público e privado.</p><a href="https://www.youtube.com/shorts/E2a_OKkn_Qg" target="_blank" rel="noopener"><svg class="i"><use href="#i-play"/></svg>Ver apresentação</a></div></article>
+      <article class="m rv"><figure><img src="img/bruno-luiz.webp" alt="Bruno Luiz de Souza Silva" loading="lazy" width="640" height="800"><figcaption class="area">Direito Penal</figcaption></figure><div><h3>Bruno Luiz</h3><a href="https://www.youtube.com/shorts/HbV9JSbgYAI" target="_blank" rel="noopener"><svg class="i"><use href="#i-play"/></svg>Ver apresentação</a></div></article>
+      <article class="m rv"><figure><img src="img/raisa.webp" alt="Raisa Lemos Lopes" loading="lazy" width="640" height="800"><figcaption class="area">Controladoria Jurídica</figcaption></figure><div><h3>Raisa Lemos</h3><p>Organização estratégica da advocacia, gestão de prazos e fluxos de escritório.</p><a href="https://www.youtube.com/watch?v=DXbo11GFuF0" target="_blank" rel="noopener"><svg class="i"><use href="#i-play"/></svg>Ver apresentação</a></div></article>
+      <article class="m rv"><figure><img src="img/luiza.webp" alt="Luiza Barbosa Pereira Luz" loading="lazy" width="640" height="800"><figcaption class="area">Digital e LGPD</figcaption></figure><div><h3>Luiza Barbosa</h3><a href="https://www.youtube.com/shorts/cKP7KlTPeUY" target="_blank" rel="noopener"><svg class="i"><use href="#i-play"/></svg>Ver apresentação</a></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- DOBRA 4 · INVESTIMENTO + INSCRIÇÃO -->
+<section id="inscricao">
+  <div class="gridbg" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="wrap">
+    <div class="rv">
+      <span class="label">Investimento</span>
+      <h2 class="h2">Comece na próxima turma, <em>sem fidelidade.</em></h2>
+      <p class="lead">Turmas reduzidas e vagas limitadas para garantir uma experiência próxima, com espaço para interação e troca durante os encontros.</p>
+    </div>
+    <div class="enroll">
+      <div class="price rv">
+        <span class="tag">Mentoria em grupo · por área</span>
+        <p class="amount"><small>R$</small>149<span>/mês</span></p>
+        <p class="per">Assinatura mensal. Sem taxa de adesão.</p>
+        <ul class="checks">
+          <li><b><svg class="i"><use href="#i-check"/></svg></b>Online e ao vivo com o mentor</li>
+          <li><b><svg class="i"><use href="#i-check"/></svg></b>Gravações disponíveis na plataforma</li>
+          <li><b><svg class="i"><use href="#i-check"/></svg></b>Turma da sua área do Direito</li>
+          <li><b><svg class="i"><use href="#i-check"/></svg></b>Cancele quando quiser</li>
+        </ul>
+        <div class="facts">
+          <div class="fact"><strong>Entrada semanal</strong><span id="proxima">Novas turmas abrem toda semana</span></div>
+          <div class="fact"><strong>Vagas limitadas</strong><span>Turmas reduzidas por área</span></div>
+        </div>
+        <p class="solo">Prefere atendimento individual? Oferecemos <strong>mentoria individual sob demanda</strong>. <a href="https://wa.me/556198499420?text=Ol%C3%A1!%20Tenho%20interesse%20na%20mentoria%20individual." target="_blank" rel="noopener">Fale com a gente no WhatsApp</a>.</p>
+      </div>
+
+      <form class="form rv" id="lead" novalidate>
+        <h3>Garanta sua vaga</h3>
+        <p>Preencha seus dados e a equipe entra em contato com os detalhes da próxima turma.</p>
+        <div class="field"><label for="nome">Nome</label><input id="nome" name="entry.785703917" autocomplete="name" required placeholder="Seu nome completo"></div>
+        <div class="field"><label for="email">E-mail</label><input id="email" name="entry.1969686530" type="email" autocomplete="email" required placeholder="voce@email.com"></div>
+        <div class="field"><label for="tel">WhatsApp</label><input id="tel" name="entry.1506819704" type="tel" autocomplete="tel" inputmode="tel" required placeholder="(31) 99999-9999"></div>
+        <div class="field"><label for="area">Área de atuação</label>
+          <select id="area" name="entry.428061084" required>
+            <option value="" disabled selected>Selecione a área de interesse</option>
+            <option>Direito Civil</option>
+            <option>Direito de Família</option>
+            <option>Direito Empresarial</option>
+            <option>Direito Penal</option>
+            <option>Direito Médico e da Saúde</option>
+            <option>Direito do Consumidor</option>
+            <option>Direito Digital e LGPD</option>
+            <option>Direito de Energia e Ambiental</option>
+            <option>Controladoria Jurídica</option>
+            <option>Outra área</option>
+          </select>
+        </div>
+        <button class="btn" type="submit"><span>Quero minha vaga</span><span class="dot"><svg class="i"><use href="#i-arrow"/></svg></span></button>
+        <div class="msg" id="msg" role="status" aria-live="polite"></div>
+        <p class="note">Seus dados são usados apenas para contato sobre a mentoria.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo-claro.webp" alt="Aprenda a Advogar" width="440" height="194" loading="lazy">
+    <nav>
+      <a href="mailto:contato@aprendaadvogar.com">contato@aprendaadvogar.com</a>
+      <a href="https://www.instagram.com/aprendaadvogaroficial/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://wa.me/556198499420" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://aprendaadvogar.com.br/" target="_blank" rel="noopener">aprendaadvogar.com.br</a>
+    </nav>
+    <span>© 2026 Aprenda a Advogar</span>
+  </div>
+</footer>
+
+<script>
+// header aparece depois da hero
+const hdr=document.getElementById('top');
+new IntersectionObserver(([e])=>hdr.classList.toggle('on',!e.isIntersecting),{rootMargin:'-60px 0px 0px 0px'}).observe(document.getElementById('hero'));
+
+// scroll reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+// ponytail: "próxima entrada" = próxima segunda-feira. Se a entrada semanal for outro dia, mudar DIA_ENTRADA (0=dom … 6=sáb).
+const DIA_ENTRADA=1;
+(()=>{const d=new Date();d.setDate(d.getDate()+((DIA_ENTRADA-d.getDay()+7)%7||7));
+document.getElementById('proxima').textContent='Próxima entrada: '+d.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'})})();
+
+// envio para o Google Forms oficial (mesmos campos do forms.gle/2aC4bFhtK1m71shL6)
+const GF='https://docs.google.com/forms/d/e/1FAIpQLScspXX3KMdQyrme8mCeJV-H0veLnVgL34MFfsPZGo_nwTiKkw/formResponse';
+const form=document.getElementById('lead'),msg=document.getElementById('msg'),btn=form.querySelector('button');
+const say=(t,ok)=>{msg.className='msg '+(ok?'ok':'err');msg.innerHTML=t};
+form.addEventListener('submit',async ev=>{
+  ev.preventDefault();
+  const tel=form.tel.value.replace(/\D/g,'');
+  if(!form.checkValidity()||tel.length<10){
+    const bad=[...form.elements].find(el=>el.willValidate&&!el.checkValidity())||form.tel;
+    say('Confira os campos: nome, e-mail válido, WhatsApp com DDD e área de atuação.');bad.focus();return;
+  }
+  btn.disabled=true;
+  try{
+    // no-cors: o Google não devolve status legível; falha de rede cai no catch
+    await fetch(GF,{method:'POST',mode:'no-cors',body:new FormData(form)});
+    (window.dataLayer=window.dataLayer||[]).push({event:'generate_lead',lead_area:form.area.value});
+    form.reset();
+    say('<strong>Inscrição recebida!</strong> Em breve a equipe Aprenda a Advogar entra em contato pelo WhatsApp ou e-mail.',true);
+  }catch(e){
+    say('Não conseguimos enviar agora. <a href="https://forms.gle/2aC4bFhtK1m71shL6" target="_blank" rel="noopener">Clique aqui para se inscrever pelo formulário</a>.');
+  }finally{btn.disabled=false}
+});
+</script>
+</body>
+</html>
